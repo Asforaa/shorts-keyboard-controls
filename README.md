@@ -18,6 +18,7 @@
 
 - Press `L` to like or remove your Like from the current video or Short.
 - Press `←` or `→` to seek backward or forward, including in Shorts.
+- Press `K` or `J` to move to the previous or next Short.
 - Press `;` to open or close the Shorts comments panel.
 - Press `[` or `'` to scroll up or down inside Shorts comments.
 - Change every key, seek duration, scroll amount, and feature toggle from the toolbar popup.
@@ -37,6 +38,8 @@ Settings save automatically with Chromium's synced extension storage and update 
 | Like / unlike | `L` |
 | Seek backward | `←` |
 | Seek forward | `→` |
+| Previous Short | `K` |
+| Next Short | `J` |
 | Open / close Shorts comments | `;` |
 | Scroll comments up | `[` |
 | Scroll comments down | `'` |
@@ -47,7 +50,7 @@ The popup prevents duplicate shortcuts. All shortcuts use one key without modifi
 
 ## Install in Brave
 
-1. Download `shorts-keyboard-controls-v1.3.0.zip` from the [latest release](https://github.com/Asforaa/shorts-keyboard-controls/releases/latest).
+1. Download `shorts-keyboard-controls-v1.4.0.zip` from the [latest release](https://github.com/Asforaa/shorts-keyboard-controls/releases/latest).
 2. Extract the ZIP somewhere you will keep it. Do not delete that extracted folder after installation.
 3. Open `brave://extensions`.
 4. Turn on **Developer mode** in the top-right corner.

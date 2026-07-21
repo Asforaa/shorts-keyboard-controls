@@ -5,11 +5,14 @@
     enabled: true,
     likeEnabled: true,
     seekEnabled: true,
+    shortsNavigationEnabled: true,
     commentsEnabled: true,
     smoothComments: true,
     likeKey: "KeyL",
     seekBackwardKey: "ArrowLeft",
     seekForwardKey: "ArrowRight",
+    shortsUpKey: "KeyK",
+    shortsDownKey: "KeyJ",
     commentsToggleKey: "Semicolon",
     commentsUpKey: "BracketLeft",
     commentsDownKey: "Quote",
@@ -239,6 +242,34 @@
     video.currentTime = nextTime;
   }
 
+  function navigateShorts(direction) {
+    const activeShort = getActiveShort();
+    if (!activeShort) return;
+
+    const shortsContainer =
+      activeShort.closest("ytd-shorts")?.querySelector("#shorts-container") ||
+      document.querySelector("ytd-shorts #shorts-container");
+    if (!shortsContainer) return;
+
+    const shorts = [...shortsContainer.querySelectorAll("ytd-reel-video-renderer")];
+    const activeIndex = shorts.indexOf(activeShort);
+    const targetShort = shorts[activeIndex + direction];
+
+    if (targetShort) {
+      targetShort.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest"
+      });
+      return;
+    }
+
+    shortsContainer.scrollBy({
+      top: direction * shortsContainer.clientHeight,
+      behavior: "smooth"
+    });
+  }
+
   document.addEventListener(
     "keydown",
     (event) => {
@@ -280,6 +311,16 @@
         event.preventDefault();
         event.stopImmediatePropagation();
         scrollComments(1);
+        return;
+      }
+
+      if (
+        settings.shortsNavigationEnabled &&
+        (event.code === settings.shortsUpKey || event.code === settings.shortsDownKey)
+      ) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        navigateShorts(event.code === settings.shortsUpKey ? -1 : 1);
         return;
       }
 

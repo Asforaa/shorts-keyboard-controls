@@ -70,6 +70,27 @@
             </div>
           </div>
         </div>
+        <div class="subsection-heading">
+          <div>
+            <h3>Move between Shorts</h3>
+            <p>Previous or next Short</p>
+          </div>
+          <label class="switch">
+            <span class="sr-only">Enable Shorts navigation shortcuts</span>
+            <input id="shortsNavigationEnabled" type="checkbox" data-setting="shortsNavigationEnabled" />
+            <span class="switch-track" aria-hidden="true"></span>
+          </label>
+        </div>
+        <div class="key-grid navigation-grid">
+          <div class="setting-row compact">
+            <label for="shortsUpKey">Previous</label>
+            <button class="key-input" id="shortsUpKey" type="button" data-key-setting="shortsUpKey">K</button>
+          </div>
+          <div class="setting-row compact">
+            <label for="shortsDownKey">Next</label>
+            <button class="key-input" id="shortsDownKey" type="button" data-key-setting="shortsDownKey">J</button>
+          </div>
+        </div>
       </section>
 
       <section class="settings-card" aria-labelledby="comments-heading">

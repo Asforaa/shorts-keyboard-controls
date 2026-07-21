@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0 — 2026-07-21
+
+- Press `K` to move to the previous Short.
+- Press `J` to move to the next Short.
+- Customize or disable the Shorts navigation shortcuts from the settings popup.
+
 ## 1.3.0 — 2026-07-21
 
 First public release.

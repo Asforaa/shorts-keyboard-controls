@@ -105,6 +105,26 @@ h1 {
   font-weight: 650;
 }
 
+.subsection-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+
+.subsection-heading h3 {
+  margin: 0 0 1px;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.subsection-heading p {
+  color: var(--muted);
+  font-size: 10px;
+}
+
 .setting-row {
   display: flex;
   min-height: 36px;
@@ -124,6 +144,10 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
+}
+
+.navigation-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .setting-row.compact {

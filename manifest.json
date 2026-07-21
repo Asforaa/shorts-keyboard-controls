@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Shorts Keyboard Controls",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Custom keyboard controls for liking, seeking, and navigating comments on YouTube videos and Shorts.",
   "author": "Asforaa",
   "homepage_url": "https://github.com/Asforaa/shorts-keyboard-controls",
