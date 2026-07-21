@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shorts Keyboard Controls</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div class="brand-mark" aria-hidden="true">
+          <img src="icons/icon-32.png" alt="" width="32" height="32" />
+        </div>
+        <div>
+          <h1>Shorts Controls</h1>
+          <p>Keyboard settings for YouTube</p>
+        </div>
+        <label class="switch master-switch">
+          <span class="sr-only">Enable extension</span>
+          <input id="enabled" type="checkbox" data-setting="enabled" />
+          <span class="switch-track" aria-hidden="true"></span>
+        </label>
+      </header>
+
+      <section class="settings-card" aria-labelledby="like-heading">
+        <div class="section-heading">
+          <div>
+            <h2 id="like-heading">Like</h2>
+            <p>Toggle the current video's Like</p>
+          </div>
+          <label class="switch">
+            <span class="sr-only">Enable Like shortcut</span>
+            <input id="likeEnabled" type="checkbox" data-setting="likeEnabled" />
+            <span class="switch-track" aria-hidden="true"></span>
+          </label>
+        </div>
+        <div class="setting-row">
+          <label for="likeKey">Shortcut</label>
+          <button class="key-input" id="likeKey" type="button" data-key-setting="likeKey">L</button>
+        </div>
+      </section>
+
+      <section class="settings-card" aria-labelledby="seek-heading">
+        <div class="section-heading">
+          <div>
+            <h2 id="seek-heading">Seek</h2>
+            <p>Jump through videos and Shorts</p>
+          </div>
+          <label class="switch">
+            <span class="sr-only">Enable seek shortcuts</span>
+            <input id="seekEnabled" type="checkbox" data-setting="seekEnabled" />
+            <span class="switch-track" aria-hidden="true"></span>
+          </label>
+        </div>
+        <div class="key-grid">
+          <div class="setting-row compact">
+            <label for="seekBackwardKey">Back</label>
+            <button class="key-input" id="seekBackwardKey" type="button" data-key-setting="seekBackwardKey">←</button>
+          </div>
+          <div class="setting-row compact">
+            <label for="seekForwardKey">Forward</label>
+            <button class="key-input" id="seekForwardKey" type="button" data-key-setting="seekForwardKey">→</button>
+          </div>
+          <div class="setting-row compact">
+            <label for="seekSeconds">Seconds</label>
+            <div class="number-control">
+              <input id="seekSeconds" type="number" min="1" max="60" step="1" data-number-setting="seekSeconds" />
+              <span aria-hidden="true">s</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-card" aria-labelledby="comments-heading">
+        <div class="section-heading">
+          <div>
+            <h2 id="comments-heading">Shorts comments</h2>
+            <p>Open and move through comments</p>
+          </div>
+          <label class="switch">
+            <span class="sr-only">Enable comments shortcuts</span>
+            <input id="commentsEnabled" type="checkbox" data-setting="commentsEnabled" />
+            <span class="switch-track" aria-hidden="true"></span>
+          </label>
+        </div>
+        <div class="key-grid comments-grid">
+          <div class="setting-row compact">
+            <label for="commentsToggleKey">Toggle</label>
+            <button class="key-input" id="commentsToggleKey" type="button" data-key-setting="commentsToggleKey">;</button>
+          </div>
+          <div class="setting-row compact">
+            <label for="commentsUpKey">Scroll up</label>
+            <button class="key-input" id="commentsUpKey" type="button" data-key-setting="commentsUpKey">[</button>
+          </div>
+          <div class="setting-row compact">
+            <label for="commentsDownKey">Scroll down</label>
+            <button class="key-input" id="commentsDownKey" type="button" data-key-setting="commentsDownKey">'</button>
+          </div>
+        </div>
+        <div class="setting-row divided">
+          <label for="commentScrollPercent">Scroll amount</label>
+          <div class="number-control percent-control">
+            <input id="commentScrollPercent" type="number" min="25" max="100" step="5" data-number-setting="commentScrollPercent" />
+            <span aria-hidden="true">%</span>
+          </div>
+        </div>
+        <label class="check-row" for="smoothComments">
+          <span>Smooth scrolling</span>
+          <input id="smoothComments" type="checkbox" data-setting="smoothComments" />
+        </label>
+      </section>
+
+      <footer class="app-footer">
+        <p id="status" role="status" aria-live="polite">Settings save automatically</p>
+        <button id="resetButton" class="reset-button" type="button">Reset defaults</button>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
