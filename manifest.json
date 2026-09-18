@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Shorts Keyboard Controls",
-  "version": "1.4.0",
-  "description": "Custom keyboard controls for liking, seeking, and navigating comments on YouTube videos and Shorts.",
+  "version": "1.5.0",
+  "description": "Custom keyboard controls for YouTube videos, Shorts, comments, and YouTube Music.",
   "author": "Asforaa",
   "homepage_url": "https://github.com/Asforaa/shorts-keyboard-controls",
   "permissions": ["storage"],
@@ -25,7 +25,8 @@
     {
       "matches": [
         "https://www.youtube.com/*",
-        "https://youtube.com/*"
+        "https://youtube.com/*",
+        "https://music.youtube.com/*"
       ],
       "js": ["content.js"],
       "run_at": "document_start"

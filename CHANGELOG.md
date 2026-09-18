@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.0 — 2026-09-18
+
+- Support `L` to like or unlike the current track on YouTube Music.
+- Support the configured seek-backward and seek-forward shortcuts on YouTube Music.
+- Add `music.youtube.com` to the extension's supported pages.
+
 ## 1.4.0 — 2026-07-21
 
 - Press `K` to move to the previous Short.

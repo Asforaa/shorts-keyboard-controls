@@ -4,11 +4,12 @@ Shorts Keyboard Controls does not collect, store on developer-controlled systems
 
 ## What the extension accesses
 
-The extension runs on YouTube pages so it can:
+The extension runs on YouTube and YouTube Music pages so it can:
 
 - identify the currently active video or Short;
 - activate YouTube's existing Like and comments controls;
 - change the current video's playback position;
+- activate YouTube Music's existing Like control and change the current track's playback position;
 - scroll the open Shorts comments panel.
 
 This access happens locally in your browser. The extension does not read or transmit video history, comments, searches, account information, cookies, credentials, or other page content.

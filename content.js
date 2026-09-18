@@ -106,6 +106,10 @@
   }
 
   function getLikeScope() {
+    if (location.hostname === "music.youtube.com") {
+      return document.querySelector("ytmusic-player-bar") || document;
+    }
+
     return (
       getActiveShort() ||
       document.querySelector("ytd-watch-metadata") ||
@@ -131,6 +135,8 @@
   function findLikeButton() {
     const scope = getLikeScope();
     const stableSelectors = [
+      "ytmusic-like-button-renderer #button-shape-like button",
+      "ytmusic-like-button-renderer yt-button-shape.like button",
       "#like-button button",
       "#segmented-like-button button",
       "like-button-view-model button",
