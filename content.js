@@ -92,6 +92,10 @@
       })[0];
   }
 
+  function isShortsPage() {
+    return location.hostname !== "music.youtube.com" && location.pathname.startsWith("/shorts/");
+  }
+
   function getActiveVideo() {
     const short = getActiveShort();
     const shortVideo = short?.querySelector("video");
@@ -299,21 +303,33 @@
         return;
       }
 
-      if (settings.commentsEnabled && event.code === settings.commentsToggleKey) {
+      if (
+        isShortsPage() &&
+        settings.commentsEnabled &&
+        event.code === settings.commentsToggleKey
+      ) {
         event.preventDefault();
         event.stopImmediatePropagation();
         toggleComments();
         return;
       }
 
-      if (settings.commentsEnabled && event.code === settings.commentsUpKey) {
+      if (
+        isShortsPage() &&
+        settings.commentsEnabled &&
+        event.code === settings.commentsUpKey
+      ) {
         event.preventDefault();
         event.stopImmediatePropagation();
         scrollComments(-1);
         return;
       }
 
-      if (settings.commentsEnabled && event.code === settings.commentsDownKey) {
+      if (
+        isShortsPage() &&
+        settings.commentsEnabled &&
+        event.code === settings.commentsDownKey
+      ) {
         event.preventDefault();
         event.stopImmediatePropagation();
         scrollComments(1);
@@ -321,6 +337,7 @@
       }
 
       if (
+        isShortsPage() &&
         settings.shortsNavigationEnabled &&
         (event.code === settings.shortsUpKey || event.code === settings.shortsDownKey)
       ) {
